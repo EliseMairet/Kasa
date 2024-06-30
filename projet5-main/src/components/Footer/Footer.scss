@@ -1,6 +1,24 @@
-.footer{
-    background-color:#181818;
-    .footer_text{
-        color:#FFFFFF;
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 20px 0;
+    height: 209px;
+  
+    .footer_logo {
+      margin: 50px;
+  
+      img {
+        max-width: 122px;
+        height: 39px;
+      }
     }
-}
+  
+    .footer_text {
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+  

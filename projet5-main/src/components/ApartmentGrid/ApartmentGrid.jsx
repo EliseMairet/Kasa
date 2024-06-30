@@ -14,7 +14,7 @@ function ApartmentGrid() {
                             <ApartmentCard image={apartment.cover} title={apartment.title} />
                         </Link>
                     </article>
-                );
+                )
         })}
         </div>
     )

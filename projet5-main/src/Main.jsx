@@ -6,18 +6,18 @@ import ApartmentPage from './pages/Apartmentpage'
 import About from './pages/About';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
-import Error from './pages/404';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router>
-      <Navbar />
+      <Navbar/>
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/about" element={<About />} />
         <Route path='/rentalSheet/:id' element={<ApartmentPage />} />
-        <Route path="*" element={<Error />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />
     </Router>
