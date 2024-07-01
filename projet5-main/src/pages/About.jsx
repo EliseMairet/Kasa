@@ -1,6 +1,6 @@
 import React from 'react'
 import "./About.scss"
-import Collapse from '../components/collapse/collapse.jsx';
+import Collapse from '../components/collapse/collapse';
 import background from '../assets/background.png'
 
 function About() {

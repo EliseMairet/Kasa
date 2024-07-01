@@ -1,12 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react';
+import "./ApartmentCard.scss";
 
-function ApartementCard(props) {
+
+const Slideshow = ({ images }) => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const goToPreviousSlide = () => {
+    setCurrentSlide(prevSlide => (prevSlide === 0 ? images.length - 1 : prevSlide - 1));
+  };
+
+  const goToNextSlide = () => {
+    setCurrentSlide(prevSlide => (prevSlide === images.length - 1 ? 0 : prevSlide + 1));
+  };
+
   return (
-    <div className='apartement'>
-      <img src={props.image} alt={props.title} className="card_img" />
-        <h2 className="card_title">{props.title}</h2>
+    <div className='slideshow'>
+      <div className='slidecontainer'>
+        <div onClick={goToPreviousSlide} className='prev'>
+          <FontAwesomeIcon icon={faChevronLeft} />
+        </div>
+        <img src={images[currentSlide]} alt={`Slide ${currentSlide}`} className="image_slide" />
+        <div onClick={goToNextSlide} className='next'>
+          <FontAwesomeIcon icon={faChevronRight} />
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default ApartementCard;
+export default Slideshow;

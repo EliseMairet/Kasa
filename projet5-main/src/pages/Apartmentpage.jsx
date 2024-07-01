@@ -1,11 +1,12 @@
 import React from 'react'
 import "./Apartmentpage.scss"
+import ApartmentCard from "../components/ApartmentCard/ApartmentCard"
 
 function Apartmentpage() {
   return (
     <div className='apartement-page'> 
         <div>
-            <img src="../assets/Background.png" alt="image appartement" />
+            <ApartmentCard/>
         </div>
         <div className='apartement_title'>
             <h1>Cozy loft on the Canal Saint-Martin</h1>
