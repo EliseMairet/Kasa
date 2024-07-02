@@ -2,7 +2,7 @@ import React from "react";
 import "./ApartmentGrid.scss";
 import { Link } from "react-router-dom";
 import ApartmentCard from "../ApartmentCard/ApartmentCard";
-import apartments from '../../../logement.json'
+import apartments from '../../../logement.json';
 
 function ApartmentGrid() {
     return (

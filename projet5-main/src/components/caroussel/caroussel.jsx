@@ -17,11 +17,11 @@ const Slideshow = ({ images }) => {
     <div className='slideshow'>
       <div className='slidecontainer'>
         <div onClick={goToPreviousSlide} className='prev'>
-          <FontAwesomeIcon icon={faChevronLeft} />
+        <i class="fa-solid fa-chevron-left"></i>
         </div>
         <img src={images[currentSlide]} alt={`Slide ${currentSlide}`} className="image_slide" />
         <div onClick={goToNextSlide} className='next'>
-          <FontAwesomeIcon icon={faChevronRight} />
+        <i class="fa-solid fa-chevron-right"></i>
         </div>
       </div>
     </div>

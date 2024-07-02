@@ -13,7 +13,7 @@ const Collapse = ({ title, content }) => {
       <div className='collapse_unfold' onClick={toggleCollapse}>
         <div className='collapse_title'>{title}</div>
         <div className={`collapse_icon ${isCollapsed ? 'closed' : 'open'}`}>
-        <FontAwesomeIcon icon="fa-regular fa-chevron-down" />
+        <i className="fa-solid fa-chevron-down"></i>
         </div>
       </div>
       {!isCollapsed && <p className='collapse_content'>{content}</p>}

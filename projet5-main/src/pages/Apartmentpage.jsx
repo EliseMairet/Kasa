@@ -1,28 +1,40 @@
-import React from 'react'
-import "./Apartmentpage.scss"
-import ApartmentCard from "../components/ApartmentCard/ApartmentCard"
+import React from 'react';
+import "./Apartmentpage.scss";
+import Caroussel from "../components/caroussel/caroussel";
+import logements from "../../logement.json";
+import equipements from "../../logement.json";
+import ratings from "../../logement.json";
+import Rate from "../components/Rate/Rate";
+import {useParams} from "react-router-dom";
+import Collapse from "../components/collapse/collapse";
 
 function Apartmentpage() {
-  return (
-    <div className='apartement-page'> 
-        <div>
-            <ApartmentCard/>
-        </div>
-        <div className='apartement_title'>
-            <h1>Cozy loft on the Canal Saint-Martin</h1>
-            <h2>Paris, Ile-de-France</h2>
-            <p>Cozy</p>
-            <p>Canal</p>
-            <p>Paris 10</p>
-        </div>
-        <div className='apartement_owner'>
-            <h3>Alexandre Dumas</h3>
-            <div className='badge'>
-                <span></span>
+    const {id} = useParams();
+    const ficheLogement = logements.find((logement) => logement.id === id);
+    const ficheEquipement = equipements.find((equipement) => equipement.id === id);
+    const ficheRating = ratings.find((rating) => rating.id === id);
+
+    return (
+        <div className='apartment-page'>
+            <Caroussel images={ficheLogement.pictures}/>
+            <h3 className="title">{ficheLogement.title}</h3>
+            <h4 className='location'>{ficheLogement.location}</h4>
+            <div className='tags'>
+                {ficheLogement.tags.map((tag, index) => (
+                    <span key={index} className='tag'>{tag}</span>
+                ))}
             </div>
+            <div className='host'>
+                <img src={ficheLogement.host.picture} alt={ficheLogement.host.name} className='host-picture'/>
+                <p>{ficheLogement.host.name}</p>
+            </div>
+            <div className='rate'>
+                <Rate score={ficheRating.rating}/>
+            </div>
+            <Collapse title="Description" content={ficheLogement.description}/>
+            <Collapse title="Equipements" content={ficheEquipement.equipments}/>
         </div>
-    </div>
-  )
+    );
 }
 
 export default Apartmentpage;
