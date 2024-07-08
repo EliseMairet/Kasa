@@ -1,4 +1,5 @@
 import React from 'react'
+import "./ApartmentCard.scss"
 
 function ApartementCard(props) {
   return (

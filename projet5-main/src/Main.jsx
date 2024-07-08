@@ -7,6 +7,7 @@ import About from './pages/About';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import ErrorPage from './components/ErrorPage/ErrorPage';
+import "./Main.scss"
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

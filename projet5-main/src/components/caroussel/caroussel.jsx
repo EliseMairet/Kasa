@@ -3,15 +3,15 @@ import "./caroussel.scss";
 
 
 const Slideshow = ({ images }) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0)
 
   const goToPreviousSlide = () => {
-    setCurrentSlide(prevSlide => (prevSlide === 0 ? images.length - 1 : prevSlide - 1));
-  };
+    setCurrentSlide(prevSlide => (prevSlide === 0 ? images.length - 1 : prevSlide - 1))
+  }
 
   const goToNextSlide = () => {
-    setCurrentSlide(prevSlide => (prevSlide === images.length - 1 ? 0 : prevSlide + 1));
-  };
+    setCurrentSlide(prevSlide => (prevSlide === images.length - 1 ? 0 : prevSlide + 1))
+  }
 
   return (
     <div className='slideshow'>
@@ -25,7 +25,7 @@ const Slideshow = ({ images }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default Slideshow;

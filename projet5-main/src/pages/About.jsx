@@ -6,7 +6,7 @@ import background from '../assets/background.png'
 function About() {
     return (
       <div>
-        <div className='image'>
+        <div className='image_about'>
           <img src={background} alt='montagne'/>
         </div>
         <div className='about'> 

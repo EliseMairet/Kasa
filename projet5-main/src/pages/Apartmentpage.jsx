@@ -17,24 +17,32 @@ function Apartmentpage() {
     return (
         <div className='apartment-page'>
             <Caroussel images={ficheLogement.pictures}/>
-            <h3 className="title">{ficheLogement.title}</h3>
-            <h4 className='location'>{ficheLogement.location}</h4>
-            <div className='tags'>
-                {ficheLogement.tags.map((tag, index) => (
-                    <span key={index} className='tag'>{tag}</span>
-                ))}
+            <div className='info_apartment'>
+                <div className='apartement_entête'>
+                    <h3 className="title">{ficheLogement.title}</h3>
+                    <h4 className='location'>{ficheLogement.location}</h4>
+                    <div className='tags'>
+                        {ficheLogement.tags.map((tag, index) => (
+                            <span key={index} className='tag'>{tag}</span>
+                        ))}
+                    </div>
+                </div>
+                <div className='host_rate'>
+                    <div className='host'>
+                        <img src={ficheLogement.host.picture} alt={ficheLogement.host.name} className='host-picture'/>
+                        <p>{ficheLogement.host.name}</p>
+                    </div>
+                    <div className='rate'>
+                        <Rate score={ficheRating.rating}/>
+                    </div>
+                </div>
             </div>
-            <div className='host'>
-                <img src={ficheLogement.host.picture} alt={ficheLogement.host.name} className='host-picture'/>
-                <p>{ficheLogement.host.name}</p>
-            </div>
-            <div className='rate'>
-                <Rate score={ficheRating.rating}/>
-            </div>
+            <div className='collapse_page'>
             <Collapse title="Description" content={ficheLogement.description}/>
             <Collapse title="Equipements" content={ficheEquipement.equipments}/>
+            </div>
         </div>
-    );
+    )
 }
 
 export default Apartmentpage;
