@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import "./caroussel.scss";
 
-
 const Slideshow = ({ images }) => {
   const [currentSlide, setCurrentSlide] = useState(0)
 
@@ -17,12 +16,15 @@ const Slideshow = ({ images }) => {
     <div className='slideshow'>
       <div className='slidecontainer'>
         <div onClick={goToPreviousSlide} className='prev'>
-        <i class="fa-solid fa-chevron-left"></i>
+          <i className="fa-solid fa-chevron-left"></i>
         </div>
-        <img src={images[currentSlide]} alt={`Slide ${currentSlide}`} className="image_slide" />
+        <img src={images[currentSlide]} alt={`Diapositive ${currentSlide}`} className="image_slide" />
         <div onClick={goToNextSlide} className='next'>
-        <i class="fa-solid fa-chevron-right"></i>
+          <i className="fa-solid fa-chevron-right"></i>
         </div>
+      </div>
+      <div className='counter'>
+        {currentSlide + 1} / {images.length}
       </div>
     </div>
   )
