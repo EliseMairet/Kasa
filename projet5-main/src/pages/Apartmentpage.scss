@@ -1,14 +1,5 @@
-.apartment-page {
-    display: flex;
-    flex-direction: column;
-    min-height: calc(100vh - 40px);
-  
-    @media screen and (max-width: 760px) {
-        min-height: calc(100vh - 20px);
-    }
-  
+.apartment-page {  
     .info_apartment {
-        flex-grow: 1;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
@@ -19,6 +10,7 @@
         @media screen and (max-width: 760px) {
             flex-direction: column;
             gap: 10px;
+            display: flex;
         }
   
         .apartement_entête {
@@ -82,7 +74,7 @@
                 text-align: center;
                 gap: 5px;
                 @media screen and (max-width: 760px){
-                    justify-content: space-between;
+                
                 }
 
   
@@ -110,11 +102,18 @@
                 justify-content: center;
                 margin-top: 20px;
                 margin-left: 10px;
+                @media screen and (max-width: 760px){
+                    margin-top: 0;
+                    margin-left: auto;
+                }
   
                 img {
                     width: 25px;
                     height: 25px;
                     margin-left: 10px;
+                }
+                div{
+                    display: flex;
                 }
             }
         }
@@ -134,7 +133,7 @@
         width: 45%;
         margin: 20px 20px 0 20px;
         @media screen and (max-width: 760px){
-            width: 95%;
+            width: 90%;
         }
     }
   }

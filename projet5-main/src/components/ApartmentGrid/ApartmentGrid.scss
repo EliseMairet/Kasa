@@ -5,11 +5,12 @@
     row-gap: 30px;
     background-color:rgba(246, 246, 246, 1);
     border-radius: 25px;
-    padding: 25px;
+    padding: 30px;
     justify-content: space-around;
 
     @media screen and (max-width: 760px) {
       background-color: white;
+      margin: 0;
     }
   }
 

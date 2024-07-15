@@ -15,17 +15,23 @@ const Slideshow = ({ images }) => {
   return (
     <div className='slideshow'>
       <div className='slidecontainer'>
-        <div onClick={goToPreviousSlide} className='prev'>
-          <i className="fa-solid fa-chevron-left"></i>
-        </div>
+        {images.length > 1 && (
+          <div onClick={goToPreviousSlide} className='prev'>
+            <i className="fa-solid fa-chevron-left"></i>
+          </div>
+        )}
         <img src={images[currentSlide]} alt={`Diapositive ${currentSlide}`} className="image_slide" />
-        <div onClick={goToNextSlide} className='next'>
-          <i className="fa-solid fa-chevron-right"></i>
+        {images.length > 1 && (
+          <div onClick={goToNextSlide} className='next'>
+            <i className="fa-solid fa-chevron-right"></i>
+          </div>
+        )}
+      </div>
+      {images.length > 1 && (
+        <div className='counter'>
+          {currentSlide + 1} / {images.length}
         </div>
-      </div>
-      <div className='counter'>
-        {currentSlide + 1} / {images.length}
-      </div>
+      )}
     </div>
   )
 }
