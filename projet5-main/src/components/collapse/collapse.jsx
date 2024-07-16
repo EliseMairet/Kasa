@@ -16,15 +16,13 @@ const Collapse = ({ title, content }) => {
           <i className="fa-solid fa-chevron-down"></i>
         </div>
       </div>
-      { !isCollapsed && (
-        <div className='collapse_content'>
-          {Array.isArray(content) ? content.map((item, index) => {
-            return (
-              <p key={index}>{item}</p>
-            )
-          }) : content}
-        </div>
-      )}
+      <div className={`collapse_content ${isCollapsed ? 'collapse_content_hidden' : ''}`}>
+        {Array.isArray(content) ? content.map((item, index) => {
+          return (
+            <p key={index}>{item}</p>
+          )
+        }) : content}
+      </div>
     </div>
   )
 }

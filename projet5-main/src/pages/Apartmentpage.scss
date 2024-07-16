@@ -9,8 +9,8 @@
   
         @media screen and (max-width: 760px) {
             flex-direction: column;
-            gap: 10px;
             display: flex;
+            width: 100%;
         }
   
         .apartement_entête {
@@ -22,6 +22,9 @@
                 font-size: 36px;
                 font-weight: 500;
                 margin-top: 20px;
+                @media screen and (max-width: 760px){
+                    font-size: 18px;
+                }
             }
   
             .location {
@@ -29,6 +32,9 @@
                 font-weight: 500;
                 margin-top: -30px;
                 color: black;
+                @media screen and (max-width: 760px){
+                    font-size: 14px;
+                }
             }
   
             .tags {
@@ -65,6 +71,8 @@
             @media screen and (max-width: 760px){
                 display: flex;
                 flex-direction: row-reverse;
+                width: 100%;
+                justify-content:space-between ;
             }
   
             .host {
@@ -104,13 +112,17 @@
                 margin-left: 10px;
                 @media screen and (max-width: 760px){
                     margin-top: 0;
-                    margin-left: auto;
+                    margin-left: 0;
                 }
   
                 img {
                     width: 25px;
                     height: 25px;
                     margin-left: 10px;
+                    @media screen and (max-width: 760px){
+                        width: 18px;
+                        height: 18px;
+                    }
                 }
                 div{
                     display: flex;
@@ -126,14 +138,18 @@
         @media screen and (max-width: 760px){
             display: flex;
             flex-direction: column;
+            width: 100%;
+            margin: 0;
         }
     }
   
     .collapse {
+        display: block;
         width: 45%;
         margin: 20px 20px 0 20px;
         @media screen and (max-width: 760px){
-            width: 90%;
+            width: 100%;
+            margin-left: 10px;
         }
     }
   }

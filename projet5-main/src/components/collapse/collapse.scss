@@ -3,7 +3,6 @@
   border-bottom-right-radius: 5px;
   margin: 20px 0px;
 
-
   &_unfold {  
     display: flex;
     justify-content: space-between;
@@ -16,8 +15,8 @@
     padding: 10px 15px;
     cursor: pointer;
     @media screen and (max-width: 760px){
-      width: 90%;
-  }
+      font-size: 16px;
+    }
     
     .collapse_icon {
       transition: all 0.6s ease-in-out;
@@ -38,15 +37,18 @@
     font-size: 18px;
     background-color: rgb(246, 246, 246);
     color: black;
-    transition: visibility 0.5s ease-in-out,
-                    opacity 0.5s ease-in-out,
-                    height 0.2s ease-in-out;
+    transition: max-height 0.6s ease-in-out, opacity 0.6s ease-in-out;  
+    overflow: hidden;
+    max-height: 500px;
+    opacity: 1;
+    @media screen and (max-width: 760px){
+      font-size: 14px;
+    }
   }
 
   &_content_hidden {
-    visibility: hidden;
+    max-height: 0;
     opacity: 0;
-    height: 0;
   }
 }
 
