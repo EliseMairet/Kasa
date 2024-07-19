@@ -11,10 +11,10 @@ function Navbar() {
         </div>
         <div className="navbar_link">
             <NavLink to="/">
-            <div>Accueil</div>
+            <div>ACCUEIL</div>
             </NavLink>
             <NavLink to="/about">
-            <div>A Propos</div>
+            <div>A PROPOS</div>
             </NavLink> 
         </div>
     </nav>
